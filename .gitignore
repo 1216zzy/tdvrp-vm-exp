@@ -1,6 +1,36 @@
-dataset/
-output/
+
+## .gitignore（同步适配code、dataset文件夹）
+```gitignore
+# ========== C语言编译产物 ==========
+*.o
+*.a
+*.so
+*.out
+*.exe
+tdvrp
+build/
+obj/
+
+# ========== Python 缓存 ==========
 __pycache__/
-*.log
-.vscode/
 *.pyc
+*.pyo
+*.pyd
+
+# ========== 输出图片、日志、临时结果 ==========
+output/*.png
+output/*.jpg
+output/*.pdf
+output/*.log
+output/*.txt
+
+# ========== 数据集（大数据文件不上传仓库） ==========
+dataset/*.txt
+dataset/*.csv
+
+# ========== VSCode远程ssh相关缓存 ==========
+.vscode/
+.idea/
+
+# ========== 系统文件 ==========
+.DS_Store
